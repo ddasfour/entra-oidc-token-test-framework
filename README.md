@@ -7,14 +7,14 @@ OIDC authentication endpoints using a live app registration.
 
 - OIDC discovery endpoint structure and required fields
 - Token acquisition using client credentials flow (MSAL)
-- Token response validation — structure, type, and expiry
+- Token response validation structure, type, and expiry
 - Error handling for invalid client credentials
-- Redirect URI validation — registered vs unregistered URIs
+- Redirect URI validation registered vs unregistered URIs
 - Response time thresholds across all endpoints
 
 ## Key finding
 
-Entra ID uses deferred redirect URI validation — it presents
+Entra ID uses deferred redirect URI validation it presents
 the sign-in page first and only rejects an unregistered
 redirect URI after authentication. This is important behaviour
 to understand when building SSO integrations at scale.
